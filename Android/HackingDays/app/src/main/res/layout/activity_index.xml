@@ -40,4 +40,14 @@
         android:layout_alignParentEnd="true"
         android:hint="password" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:id="@+id/butLogin"
+        android:layout_below="@+id/etPassword"
+        android:layout_centerHorizontal="true"
+        android:background="#9C27B0"
+        android:textColor="#f44336" />
+
 </RelativeLayout>
