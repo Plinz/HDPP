@@ -15,7 +15,7 @@ import google.Result;
 public class Client {
 
 	private String adresse;
-	private double[] coord;
+	private double[] coord = new double[2];
 	private String email;
 	private String nom;
 	private String prenom;
@@ -119,8 +119,10 @@ public class Client {
 				.convertToLatLong(this.adresse);
 		if (res.getStatus().equals("OK")) {
 			for (Result result : res.getResults()) {
-				this.coord[0] = Double.parseDouble(result.getGeometry().getLocation().getLat());
-				this.coord[1] = Double.parseDouble(result.getGeometry().getLocation().getLng());
+				this.coord[0] = Double.parseDouble(result.getGeometry()
+						.getLocation().getLat());
+				this.coord[1] = Double.parseDouble(result.getGeometry()
+						.getLocation().getLng());
 			}
 		}
 		this.email = email;
@@ -129,6 +131,33 @@ public class Client {
 		this.age = age;
 		this.sexe = sexe;
 		this.mdp = mdp;
+	}
+
+	public static void main(String[] args) throws IOException {
+		double[] coordA = new double[2];
+		double[] coordB = new double[2];
+		GoogleResponse res = new AddressConverter()
+				.convertToLatLong("RueClaudeGardelein+136,Dunkerque,France,59140");
+		if (res.getStatus().equals("OK")) {
+			for (Result result : res.getResults()) {
+				coordA[0] = Double.parseDouble(result.getGeometry()
+						.getLocation().getLat());
+				coordA[1] = Double.parseDouble(result.getGeometry()
+						.getLocation().getLng());
+			}
+		}
+		GoogleResponse res2 = new AddressConverter()
+				.convertToLatLong("RueClaudeGardelein+76,Dunkerque,France,59140");
+		if (res2.getStatus().equals("OK")) {
+			for (Result result : res2.getResults()) {
+				coordB[0] = Double.parseDouble(result.getGeometry()
+						.getLocation().getLat());
+				coordB[1] = Double.parseDouble(result.getGeometry()
+						.getLocation().getLng());
+			}
+		}
+		double d = calcul.Distance.calcul(coordA, coordB);
+		System.out.println("Distance = "+d);
 	}
 
 }
