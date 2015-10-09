@@ -119,10 +119,8 @@ public class Client {
 				.convertToLatLong(this.adresse);
 		if (res.getStatus().equals("OK")) {
 			for (Result result : res.getResults()) {
-				this.coord[0] = Double.parseDouble(result.getGeometry().getViewport().getNortheast().getLat());
-				this.coord[1] = Double.parseDouble(result.getGeometry().getViewport().getNortheast().getLng());
-				this.coord[2] = Double.parseDouble(result.getGeometry().getViewport().getSouthwest().getLat());
-				this.coord[3] = Double.parseDouble(result.getGeometry().getViewport().getSouthwest().getLng());
+				this.coord[0] = Double.parseDouble(result.getGeometry().getLocation().getLat());
+				this.coord[1] = Double.parseDouble(result.getGeometry().getLocation().getLng());
 			}
 		}
 		this.email = email;

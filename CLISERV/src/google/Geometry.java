@@ -10,8 +10,8 @@ public class Geometry {
  
  @JsonIgnore
  private Object bounds;
- 
- private Viewport viewport;
+ @JsonIgnore
+ private Object viewport;
 
  public Location getLocation() {
   return location;
@@ -37,11 +37,11 @@ public class Geometry {
   this.bounds = bounds;
  }
 
- public Viewport getViewport() {
+ public Object getViewport() {
   return viewport;
  }
 
- public void setViewport(Viewport viewport) {
+ public void setViewport(Object viewport) {
   this.viewport = viewport;
  }
  
