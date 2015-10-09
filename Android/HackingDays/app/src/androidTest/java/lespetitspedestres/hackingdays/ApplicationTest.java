@@ -1,4 +1,4 @@
-package ovh.dowan.hdpp;
+package lespetitspedestres.hackingdays;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
