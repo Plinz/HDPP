@@ -2,6 +2,7 @@ package lespetitspedestres.hackingdays;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.net.InetAddress;
@@ -85,7 +86,7 @@ public class Register extends Activity {
 			pass = (TextView) findViewById(R.id.pass);
 			str += pass.getText() + "";
 			
-			new InputStreamWriter(socket.getInputStream());
+			new ObjectInputStream(socket.getInputStream());
 			PrintWriter out = new PrintWriter(new BufferedWriter(
 					new OutputStreamWriter(socket.getOutputStream())), true);
 			out.println(str);

@@ -17,25 +17,12 @@ import java.net.UnknownHostException;
 
 public class Index extends Activity {
 
-	private Socket socket;
 
-	private static final int SERVERPORT = 4242;
-	private static final String SERVER_IP = "176.31.118.118";
-
-	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		new Thread(new ClientThread()).start();
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_index);
 	}
-	public void onPause() {
-		super.onPause();
-		try {
-			socket.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
+
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -65,35 +52,11 @@ public class Index extends Activity {
 	}
 
 	public void doLogin(View view) {
-		try {
-			String str = "coucou";
-			PrintWriter out = new PrintWriter(new BufferedWriter(
-					new OutputStreamWriter(socket.getOutputStream())), true);
-			out.println(str);
-		} catch (UnknownHostException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+
 		Intent intentl = new Intent(Index.this, Login.class);
 		startActivity(intentl);
 	}
 
-	class ClientThread implements Runnable {
-
-		@Override
-		public void run() {
-			try {
-				InetAddress serverAddr = InetAddress.getByName(SERVER_IP);
-				socket = new Socket(serverAddr, SERVERPORT);
-			} catch (UnknownHostException e1) {
-				e1.printStackTrace();
-			} catch (IOException e1) {
-				e1.printStackTrace();
-			}
-		}
-	}
+	
  
 }
