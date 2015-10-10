@@ -19,7 +19,7 @@ public class Index extends Activity {
 
     private Socket socket;
 
-    private static final int SERVERPORT = 5000;
+    private static final int SERVERPORT = 4242;
     private static final String SERVER_IP = "176.31.118.118";
 
     @Override
@@ -51,12 +51,12 @@ public class Index extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void doRegister(View view){
-        Intent intentr = new Intent(Index.this,Register.class);
+    public void doRegister(View view) {
+        Intent intentr = new Intent(Index.this, Register.class);
         startActivity(intentr);
     }
 
-    public void doLogin(View view){
+    public void doLogin(View view) {
         try {
             String str = "coucou";
             PrintWriter out = new PrintWriter(new BufferedWriter(
@@ -70,7 +70,7 @@ public class Index extends Activity {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        Intent intentl = new Intent(Index.this,Login.class);
+        Intent intentl = new Intent(Index.this, Login.class);
         startActivity(intentl);
     }
 
@@ -80,16 +80,17 @@ public class Index extends Activity {
         public void run() {
 
             try {
-              InetAddress serverAddr = InetAddress.getByName(SERVER_IP);
+                InetAddress serverAddr = InetAddress.getByName(SERVER_IP);
 
-            socket = new Socket(serverAddr, SERVERPORT);
+                socket = new Socket(serverAddr, SERVERPORT);
 
-        } catch (UnknownHostException e1) {
-            e1.printStackTrace();
-        } catch (IOException e1) {
-            e1.printStackTrace();
+            } catch (UnknownHostException e1) {
+                e1.printStackTrace();
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
+
         }
 
     }
-
-}}
+}

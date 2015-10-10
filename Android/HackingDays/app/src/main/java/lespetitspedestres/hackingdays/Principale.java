@@ -6,6 +6,7 @@ import android.app.ActionBar;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -16,6 +17,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
 import android.widget.ArrayAdapter;
+import android.widget.RelativeLayout;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TableRow.LayoutParams;
 import android.widget.TextView;
 
 public class Principale extends Activity
@@ -44,6 +49,21 @@ public class Principale extends Activity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+
+        TableLayout t = (TableLayout)findViewById(R.id.trpropo);
+        TableRow rl;
+        LayoutParams lp  = new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT);
+        lp.setMargins(2,2,2,2);
+
+        for (int i = 0; i<50;i++){
+
+            rl=new TableRow(this);
+            rl.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
+            rl.addView(generateTextView("test", lp));
+            rl.addView(generateTextView(String.valueOf(i), lp));
+
+            t.addView(rl,lp);
+        }
     }
 
     @Override
@@ -143,6 +163,19 @@ public class Principale extends Activity
             ((Principale) activity).onSectionAttached(
                     getArguments().getInt(ARG_SECTION_NUMBER));
         }
+    }
+
+    public TextView generateTextView(String s, ViewGroup.LayoutParams lp){
+        TextView result = new TextView(this);
+        result.setBackgroundColor(Color.LTGRAY);
+        result.setTextColor(Color.DKGRAY);
+        result.setGravity(Gravity.CENTER);
+        result.setPadding(2,2,2,2);
+        result.setText(s);
+        result.setTextSize(20);
+        result.setVisibility(View.VISIBLE);
+        result.setLayoutParams(lp);
+        return result;
     }
 
 }

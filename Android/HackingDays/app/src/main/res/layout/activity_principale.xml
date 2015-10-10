@@ -9,45 +9,19 @@
     <FrameLayout android:id="@+id/container" android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
-        <TableRow
+        <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal|top"
+            android:id="@+id/trpropo">
 
-
-            <RelativeLayout
+            <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:id="@+id/rl">
 
-                <ImageView
-                    android:id="@+id/ivProfil"
-                    android:src="@drawable/profil"
-                    android:layout_width="111dp"
-                    android:layout_height="70dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentStart="true" />
-
-                <TextView
-                    android:id="@+id/tvDescription"
-                    android:text="ceci est une description"
-                    android:padding="3dip"
-                    android:layout_width="173dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/tvTitre"
-                    android:layout_centerHorizontal="true" />
-
-                <TextView
-                    android:id="@+id/tvTitre"
-                    android:text="Service"
-                    android:gravity="center"
-                    android:padding="3dip"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentStart="true" />
-            </RelativeLayout>
-
-        </TableRow>
-
+            </TableRow>
+        </TableLayout>
     </FrameLayout>
 
     <!-- android:layout_gravity="start" tells DrawerLayout to treat
