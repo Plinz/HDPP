@@ -87,6 +87,7 @@ public class Register extends Activity {
 			str += pass.getText() + "";
 			PrintWriter out = new PrintWriter(new BufferedWriter(
 					new OutputStreamWriter(socket.getOutputStream())), true);
+			out.flush();
 			new ObjectInputStream(socket.getInputStream());
 
 			out.println(str);
