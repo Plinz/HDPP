@@ -1,5 +1,9 @@
 package lespetitspedestres.hackingdays;
 
+import java.net.InetAddress;
+
+import org.apache.http.conn.ClientConnectionManager;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,11 +12,14 @@ import android.view.MenuItem;
 import android.view.View;
 
 public class Register extends Activity {
-
+	
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+    	Client client = new CLient(InetAddress.getAllByName("176.31.118.118"), 4242);
+    	client.send();
     }
 
     @Override
@@ -36,6 +43,4 @@ public class Register extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
-
-
 }
