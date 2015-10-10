@@ -1,9 +1,11 @@
 package lespetitspedestres.hackingdays;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class Login extends Activity {
 
@@ -33,5 +35,11 @@ public class Login extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    //verif du login a add
+    public void doAutent(View view){
+        Intent intenta = new Intent(Login.this,Principale.class);
+        startActivity(intenta);
     }
 }

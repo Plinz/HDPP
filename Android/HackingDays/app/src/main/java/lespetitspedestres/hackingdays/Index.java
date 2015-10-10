@@ -1,9 +1,11 @@
 package lespetitspedestres.hackingdays;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class Index extends Activity {
 
@@ -33,5 +35,15 @@ public class Index extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void doRegister(View view){
+        Intent intentr = new Intent(Index.this,Register.class);
+        startActivity(intentr);
+    }
+
+    public void doLogin(View view){
+        Intent intentl = new Intent(Index.this,Login.class);
+        startActivity(intentl);
     }
 }
