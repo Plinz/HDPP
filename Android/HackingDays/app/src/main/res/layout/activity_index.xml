@@ -7,38 +7,40 @@
     android:paddingTop="0dp"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".Index"
     android:id="@+id/RelativeLayout"
-    android:background="@drawable/stars">
+    android:background="#1e404e">
 
     <ImageView
         android:id="@+id/imageView1"
-        android:src="@drawable/bob"
+        android:src="@drawable/acceuil"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:contentDescription="@string/imagebob"
         android:layout_above="@+id/butRegister"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="39dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Register"
         android:id="@+id/butRegister"
-        android:layout_centerVertical="true"
+        android:background="#c20e0e"
+        android:onClick="doRegister"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/imageView1"
-        android:background="#ffeb3b"
-        android:onClick="doRegister" />
+        android:layout_marginBottom="31dp"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login"
         android:id="@+id/button2"
-        android:layout_below="@+id/butRegister"
-        android:layout_alignEnd="@+id/butRegister"
-        android:background="#ffeb3b"
+        android:background="#c20e0e"
+        android:onClick="doLogin"
+        android:layout_above="@+id/butRegister"
         android:layout_alignParentStart="true"
-        android:onClick="doLogin" />
+        android:layout_alignParentEnd="true" />
 
 
 </RelativeLayout>

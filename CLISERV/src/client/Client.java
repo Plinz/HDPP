@@ -26,32 +26,46 @@ public class Client extends Observable implements Observer {
 	private int age;
 	private String sexe;
 	private String mdp;
-	private ArrayList<Service> listService;
+	private ArrayList<Service> listOwnService;
+	private ArrayList<Service> listOtherService;
 	private ArrayList<Service> listAttente;
 	private ArrayList<Client> clientVoisins;
 	private double distance;
 
-
+	public void addListService(Service serv){
+		this.listOwnService.add(serv);
+		this.setChanged();
+		this.notifyObservers(serv);
+	}
+	
 	public ArrayList<Client> getClientVoisins() {
 		return clientVoisins;
 	}
 
 	public void setClientVoisins(ArrayList<Client> clientVoisins) {
+		this.listOtherService = new ArrayList<Service>();
 		for (int i=0; i<this.clientVoisins.size(); i++)
 			this.clientVoisins.get(i).deleteObserver(this);
 		this.clientVoisins = clientVoisins;
-		for (int i=0; i<this.clientVoisins.size(); i++)
+		for (int i=0; i<this.clientVoisins.size(); i++){
 			this.clientVoisins.get(i).addObserver(this);
+			for (int j=0; j<this.clientVoisins.get(i).getListOwnService().size(); j++)
+				this.listOtherService.add(this.clientVoisins.get(i).getListOwnService().get(j));
+		}
 	}
 	
 	public void addClientVoisins(Client clientVoisin){
 		clientVoisin.addObserver(this);
 		this.clientVoisins.add(clientVoisin);
+		for (int j=0; j<clientVoisin.getListOwnService().size(); j++)
+			this.listOtherService.add(clientVoisin.getListOwnService().get(j));
 	}
 	
 	public void removeClientVoisin(Client clientVoisin){
 		clientVoisin.deleteObserver(this);
 		this.clientVoisins.remove(clientVoisin);
+		for (int i=0; i<clientVoisin.getListOwnService().size(); i++)
+			this.listOtherService.remove(clientVoisin.getListOwnService().get(i));
 	}
 
 	public ArrayList<Service> getListAttente() {
@@ -78,12 +92,12 @@ public class Client extends Observable implements Observer {
 		this.adresse = adresse;
 	}
 
-	public ArrayList<Service> getListService() {
-		return listService;
+	public ArrayList<Service> getListOwnService() {
+		return listOwnService;
 	}
 
-	public void setListService(ArrayList<Service> listService) {
-		this.listService = listService;
+	public void setListOwnService(ArrayList<Service> listOwnService) {
+		this.listOwnService = listOwnService;
 	}
 
 	public double[] getCoord() {
@@ -144,22 +158,6 @@ public class Client extends Observable implements Observer {
 	
 	public Client() {}
 
-	public Client(String adresse, double[] coord, String email, String nom,
-			String prenom, int age, String sexe, String mdp,
-			ArrayList<Service> listService, double distance, ArrayList<Service> listAttente) {
-		this.listAttente = listAttente;
-		this.adresse = adresse;
-		this.coord = coord;
-		this.email = email;
-		this.nom = nom;
-		this.prenom = prenom;
-		this.age = age;
-		this.sexe = sexe;
-		this.mdp = mdp;
-		this.listService = listService;
-		this.distance = distance;
-	}
-
 	public Client(String adresse, String email, String nom, String prenom,
 			int age, String sexe, String mdp, double distance) throws IOException {
 		super();
@@ -181,7 +179,8 @@ public class Client extends Observable implements Observer {
 		this.age = age;
 		this.sexe = sexe;
 		this.mdp = mdp;
-		this.listService = new ArrayList<Service>();
+		this.listOwnService = new ArrayList<Service>();
+		this.listOwnService = new ArrayList<Service>();
 		this.distance = distance;
 		this.listAttente = new ArrayList<Service>();
 	}
@@ -214,8 +213,7 @@ public class Client extends Observable implements Observer {
 	}
 	
 	@Override
-	public void update(Observable arg0, Object arg1) {
-		// TODO Auto-generated method stub
+	public void update(Observable obs, Object serv) {
 		
 	}
 
