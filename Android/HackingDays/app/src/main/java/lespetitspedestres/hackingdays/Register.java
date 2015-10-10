@@ -53,36 +53,35 @@ public class Register extends Activity {
 			TextView adresse = null;
 			adresse = (TextView) findViewById(R.id.adresse);
 
-			str += adresse.toString() + ",";
+			str += adresse.getText() + "" + ",";
 
 			TextView ville = null;
 			ville = (TextView) findViewById(R.id.ville);
-			str += ville.toString() + ",";
+			str += ville.getText() + "" + ",";
 
 			TextView pays = null;
 			pays = (TextView) findViewById(R.id.pays);
-			str += pays.toString() + ",";
+			str += pays.getText() + "" + ",";
 
 			TextView code_postal = null;
-			code_postal = (TextView) findViewById(R.id.pays);
-			str += code_postal.toString() + "|";
+			code_postal = (TextView) findViewById(R.id.code_postal);
+			str += code_postal.getText() + "" + "|";
 			TextView email = null;
-			email = (TextView) findViewById(R.id.pays);
-			str += email.toString() + "|";
+			email = (TextView) findViewById(R.id.email);
+			str += email.getText() + "" + "|";
 			TextView nom = null;
-			nom = (TextView) findViewById(R.id.pays);
-			str += nom.toString() + "|";
+			nom = (TextView) findViewById(R.id.nom);
+			str += nom.getText() + "" + "|";
 			TextView prenom = null;
-			prenom = (TextView) findViewById(R.id.pays);
-			str += prenom.toString() + "|";
+			prenom = (TextView) findViewById(R.id.prenom);
+			str += prenom.getText() + "" + "|";
 			TextView age = null;
-			age = (TextView) findViewById(R.id.pays);
-			str += age.toString() + "|";
+			age = (TextView) findViewById(R.id.age);
+			str += age.getText() + "" + "|";
 			TextView pass = null;
-			pass = (TextView) findViewById(R.id.pays);
-			str += pass.toString();
-			Toast toast = new Toast(getApplicationContext(), str);
-			toast.show();
+			pass = (TextView) findViewById(R.id.pass);
+			str += pass.getText() + "";
+			
 			
 			PrintWriter out = new PrintWriter(new BufferedWriter(
 					new OutputStreamWriter(socket.getOutputStream())), true);
