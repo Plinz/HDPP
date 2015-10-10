@@ -1,10 +1,11 @@
 package client;
 
-import java.io.IOException;
-
 import google.AddressConverter;
 import google.GoogleResponse;
 import google.Result;
+
+import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  * 
@@ -22,13 +23,22 @@ public class Client {
 	private int age;
 	private String sexe;
 	private String mdp;
+	private ArrayList<Service> listService;
 
 	public String getAdresse() {
 		return adresse;
 	}
 
-	public void setAddress(String adresse) {
+	public void setAdresse(String adresse) {
 		this.adresse = adresse;
+	}
+
+	public ArrayList<Service> getListService() {
+		return listService;
+	}
+
+	public void setListService(ArrayList<Service> listService) {
+		this.listService = listService;
 	}
 
 	public double[] getCoord() {
@@ -87,19 +97,11 @@ public class Client {
 		this.mdp = mdp;
 	}
 
-	public Client() {
-		this.adresse = null;
-		this.age = -1;
-		this.coord = null;
-		this.email = null;
-		this.mdp = null;
-		this.nom = null;
-		this.prenom = null;
-		this.sexe = null;
-	}
+	public Client() {}
 
 	public Client(String adresse, double[] coord, String email, String nom,
-			String prenom, int age, String sexe, String mdp) {
+			String prenom, int age, String sexe, String mdp,
+			ArrayList<Service> listService) {
 		super();
 		this.adresse = adresse;
 		this.coord = coord;
@@ -109,12 +111,14 @@ public class Client {
 		this.age = age;
 		this.sexe = sexe;
 		this.mdp = mdp;
+		this.listService = listService;
 	}
 
 	public Client(String adresse, String email, String nom, String prenom,
 			int age, String sexe, String mdp) throws IOException {
 		super();
 		this.adresse = adresse;
+		this.coord = new double[2];
 		GoogleResponse res = new AddressConverter()
 				.convertToLatLong(this.adresse);
 		if (res.getStatus().equals("OK")) {
@@ -131,6 +135,7 @@ public class Client {
 		this.age = age;
 		this.sexe = sexe;
 		this.mdp = mdp;
+		this.listService = new ArrayList<Service>();
 	}
 
 	public static void main(String[] args) throws IOException {
