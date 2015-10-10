@@ -6,10 +6,11 @@ import java.net.Socket;
 
 public class ServeurTCP {
 	private ServerSocket serveurSocket = null;
+	private Socket unClient = null;
 	
 	public ServeurTCP(int port) {
 		try {
-			serveurSocket = new ServerSocket(port);
+			this.serveurSocket = new ServerSocket(port);
 		} catch (IOException e) {
 			e.printStackTrace();
 			System.exit(1);
@@ -17,16 +18,17 @@ public class ServeurTCP {
 	}
 	
 	public void miseEnService() {
-		Socket unClient = null;
-		ThreadServeur thread;
 		while (true ) {
 			try {
+				
 				System.out.println("Serveur Waiting Connexion");
 				unClient = serveurSocket.accept();
 				System.out.println("Connexion Etablished");
-				thread = new ThreadServeur(unClient);
+				ThreadServeur thread  = new ThreadServeur(unClient);
 				System.out.println("Fin constructeur");
 				thread.start();
+				unClient.close();
+				
 			} catch (IOException e) {
 				e.printStackTrace();
 				System.exit(1);

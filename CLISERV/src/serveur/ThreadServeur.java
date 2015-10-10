@@ -11,9 +11,9 @@ import client.Client;
 
 public class ThreadServeur extends Thread {
 
-	Serveur serveur;
-	InputStream in;
-	OutputStream oout;
+	private Serveur serveur;
+	private ObjectInputStream in = null;
+	private ObjectOutputStream oout = null;
 	
 	public ThreadServeur(){}
 	
