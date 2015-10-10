@@ -18,6 +18,7 @@ import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
 import android.widget.ArrayAdapter;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TableRow.LayoutParams;
@@ -50,6 +51,7 @@ public class Principale extends Activity
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
 
+
         TableLayout t = (TableLayout)findViewById(R.id.trpropo);
         TableRow rl;
         LayoutParams lp  = new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT);
@@ -64,6 +66,7 @@ public class Principale extends Activity
 
             t.addView(rl,lp);
         }
+
     }
 
     @Override
@@ -170,7 +173,7 @@ public class Principale extends Activity
         result.setBackgroundColor(Color.LTGRAY);
         result.setTextColor(Color.DKGRAY);
         result.setGravity(Gravity.CENTER);
-        result.setPadding(2,2,2,2);
+        result.setPadding(2, 2, 2, 2);
         result.setText(s);
         result.setTextSize(20);
         result.setVisibility(View.VISIBLE);
