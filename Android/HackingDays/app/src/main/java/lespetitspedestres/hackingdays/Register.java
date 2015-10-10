@@ -8,7 +8,6 @@ import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-import org.apache.http.conn.ClientConnectionManager;
 
 import Index.ClientThread;
 import android.app.Activity;
@@ -126,4 +125,7 @@ public class Register extends Activity {
 			}
 		}
 	}
+	
+	
+ 
 }

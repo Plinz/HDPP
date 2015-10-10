@@ -6,6 +6,9 @@ import google.Result;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Observable;
+import java.util.Observer;
+
 
 /**
  * 
@@ -13,7 +16,7 @@ import java.util.ArrayList;
  * 
  */
 
-public class Client {
+public class Client extends Observable implements Observer {
 
 	private String adresse;
 	private double[] coord = new double[2];
@@ -25,7 +28,31 @@ public class Client {
 	private String mdp;
 	private ArrayList<Service> listService;
 	private ArrayList<Service> listAttente;
+	private ArrayList<Client> clientVoisins;
 	private double distance;
+
+
+	public ArrayList<Client> getClientVoisins() {
+		return clientVoisins;
+	}
+
+	public void setClientVoisins(ArrayList<Client> clientVoisins) {
+		for (int i=0; i<this.clientVoisins.size(); i++)
+			this.clientVoisins.get(i).deleteObserver(this);
+		this.clientVoisins = clientVoisins;
+		for (int i=0; i<this.clientVoisins.size(); i++)
+			this.clientVoisins.get(i).addObserver(this);
+	}
+	
+	public void addClientVoisins(Client clientVoisin){
+		clientVoisin.addObserver(this);
+		this.clientVoisins.add(clientVoisin);
+	}
+	
+	public void removeClientVoisin(Client clientVoisin){
+		clientVoisin.deleteObserver(this);
+		this.clientVoisins.remove(clientVoisin);
+	}
 
 	public ArrayList<Service> getListAttente() {
 		return listAttente;
@@ -184,6 +211,12 @@ public class Client {
 		}
 		double d = calcul.Distance.calcul(coordA, coordB);
 		System.out.println("Distance = "+d);
+	}
+	
+	@Override
+	public void update(Observable arg0, Object arg1) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
