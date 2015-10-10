@@ -1,3 +1,4 @@
+package serveur;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -20,38 +21,19 @@ public class ServeurTCP {
 	
 	public void miseEnService() {
 		Socket unClient = null;
-		
+		ThreadServeur thread;
 		while (true ) {
 			try {
 				unClient = serveurSocket.accept();
+				thread = new ThreadServeur(unClient);
+				thread.start();
 			} catch (IOException e) {
 				e.printStackTrace();
 				System.exit(1);
 			}
-		
-			realiseService(unClient);
 		}
 	}
-	
-	private void realiseService(Socket unClient) {
-		PrintWriter envoi = null;
-		BufferedReader reception = null;
-		try {
-	
-			envoi = new PrintWriter(unClient.getOutputStream(), true);
-			
-			reception = new BufferedReader(
-                    new InputStreamReader(unClient.getInputStream()));
-	
-			String message = reception.readLine();
-			System.out.println(message);
-		} catch (IOException e) {
-			e.printStackTrace();
-			System.exit(1);
-		}
-	
 
-	}
 	public static void main(String[] args){
 		ServeurTCP serv = new ServeurTCP( 4242);
 		serv.miseEnService();
