@@ -5,7 +5,7 @@
     android:paddingTop="0dp"
     android:paddingBottom="0dp"
     tools:context="lespetitspedestres.hackingdays.Details"
-    android:id="@+id/">
+    android:id="@+id/rl">
 
     <Button
         android:layout_width="wrap_content"
