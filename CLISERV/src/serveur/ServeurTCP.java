@@ -25,6 +25,7 @@ public class ServeurTCP {
 				unClient = serveurSocket.accept();
 				System.out.println("Connexion Etablished");
 				thread = new ThreadServeur(unClient);
+				System.out.println("Fin constructeur");
 				thread.start();
 			} catch (IOException e) {
 				e.printStackTrace();
