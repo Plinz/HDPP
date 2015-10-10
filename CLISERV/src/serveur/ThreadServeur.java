@@ -1,8 +1,10 @@
 package serveur;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.OutputStream;
 import java.net.Socket;
 
 import client.Client;
@@ -10,16 +12,14 @@ import client.Client;
 public class ThreadServeur extends Thread {
 
 	Serveur serveur;
-	Socket client;
-	ObjectInputStream in;
-	ObjectOutputStream out;
+	InputStream in;
+	OutputStream out;
 	
 	public ThreadServeur(){}
 	
-	public ThreadServeur(Socket client) throws IOException{
-		this.in = new ObjectInputStream(client.getInputStream());
-		this.out = new ObjectOutputStream(client.getOutputStream());
-		this.client = client;
+	public ThreadServeur(Socket c) throws IOException{
+		this.in = new ObjectInputStream(c.getInputStream());
+		this.out = new ObjectOutputStream(c.getOutputStream());
 	}
 	
 	public void run (){
