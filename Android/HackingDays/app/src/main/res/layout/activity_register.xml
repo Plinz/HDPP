@@ -6,7 +6,122 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="lespetitspedestres.hackingdays.Register">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/nom"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:hint="Nom" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/prenom"
+        android:layout_below="@+id/nom"
+        android:layout_centerHorizontal="true"
+        android:hint="Prénom" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/age"
+        android:layout_below="@+id/prenom"
+        android:layout_centerHorizontal="true"
+        android:hint="Age" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Homme"
+        android:id="@+id/homme"
+        android:layout_below="@+id/age"
+        android:layout_alignStart="@+id/age" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Femme"
+        android:id="@+id/femme"
+        android:layout_below="@+id/age"
+        android:layout_alignEnd="@+id/age" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/email"
+        android:layout_below="@+id/homme"
+        android:layout_centerHorizontal="true"
+        android:hint="Mail" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:id="@+id/adresse"
+        android:layout_below="@+id/email"
+        android:layout_centerHorizontal="true"
+        android:hint="Adresse" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ville"
+        android:layout_below="@+id/adresse"
+        android:hint="Ville"
+        android:layout_alignEnd="@+id/adresse"
+        android:layout_alignStart="@+id/adresse" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/code_postal"
+        android:layout_below="@+id/ville"
+        android:hint="Code postal"
+        android:layout_alignEnd="@+id/ville"
+        android:layout_alignStart="@+id/ville" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/pass"
+        android:layout_below="@+id/code_postal"
+        android:layout_centerHorizontal="true"
+        android:hint="Mot de passe" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/confirm"
+        android:layout_below="@+id/pass"
+        android:layout_centerHorizontal="true"
+        android:hint="Confirmation" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enregistrer"
+        android:id="@+id/valider"
+        android:layout_below="@+id/confirm"
+        android:layout_alignEnd="@+id/confirm"
+        android:layout_alignStart="@+id/confirm" />
 
 </RelativeLayout>

@@ -4,7 +4,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".Index"
-    android:id="@+id/">
+    android:id="@+id/RelativeLayout"
+    android:background="@drawable/stars">
 
     <ImageView
         android:id="@+id/imageView1"
@@ -16,38 +17,25 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true" />
 
-    <EditText
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:ems="10"
-        android:id="@+id/etLogin"
-        android:layout_alignParentBottom="true"
+        android:text="Register"
+        android:id="@+id/butRegister"
+        android:layout_centerVertical="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="172dp"
-        android:layout_alignParentEnd="true"
-        android:hint="login" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/etPassword"
-        android:layout_alignTop="@+id/etLogin"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="72dp"
-        android:layout_alignParentEnd="true"
-        android:hint="password" />
+        android:layout_alignEnd="@+id/imageView1"
+        android:background="#ffeb3b" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login"
-        android:id="@+id/butLogin"
-        android:layout_below="@+id/etPassword"
-        android:layout_centerHorizontal="true"
-        android:background="#9C27B0"
-        android:textColor="#f44336" />
+        android:id="@+id/button2"
+        android:layout_below="@+id/butRegister"
+        android:layout_alignEnd="@+id/butRegister"
+        android:background="#ffeb3b"
+        android:layout_alignParentStart="true" />
+
 
 </RelativeLayout>
