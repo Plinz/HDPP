@@ -43,6 +43,7 @@ public class Index extends Activity {
     }
 
     public void doLogin(View view){
+        Client test = new Client("176.31.118.118", 4242);
         Intent intentl = new Intent(Index.this,Login.class);
         startActivity(intentl);
     }
