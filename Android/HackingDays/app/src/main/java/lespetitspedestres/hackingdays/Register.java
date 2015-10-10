@@ -9,7 +9,6 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 
-import Index.ClientThread;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -41,9 +40,13 @@ public class Register extends Activity {
 	}
 
 	@Override
-	private void onPause() {
+	public void onPause() {
 		super.onPause();
-		socket.close();
+		try {
+			socket.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public void doRegister(View view) {
