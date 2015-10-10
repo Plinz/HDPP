@@ -32,7 +32,6 @@ public class Register extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_register);
 		new Thread(new ClientThread()).start();
-
 	}
 
 	@Override
