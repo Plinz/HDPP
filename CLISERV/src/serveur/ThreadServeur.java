@@ -13,12 +13,12 @@ public class ThreadServeur extends Thread {
 
 	Serveur serveur;
 	InputStream in;
-	OutputStream out;
+	//OutputStream oout;
 	
 	public ThreadServeur(){}
 	
 	public ThreadServeur(Socket c) throws IOException{
-		this.out = new ObjectOutputStream(c.getOutputStream());
+	//	this.oout = new ObjectOutputStream(c.getOutputStream());
 		this.in = new ObjectInputStream(c.getInputStream());
 	}
 	
