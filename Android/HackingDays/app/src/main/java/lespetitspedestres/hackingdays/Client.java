@@ -23,9 +23,7 @@ public class Client {
         reception = new BufferedReader(new InputStreamReader(socket.getInputStream()));
     }
 
-
     public void send() throws IOException {
-
         String message = "coucou";
         envoi.println(message);
     }
