@@ -2,7 +2,7 @@ package calcul;
 
 public class Distance {
 	
-	static double calcul(double[] coordA, double[] coordB){
+	public static double calcul(double[] coordA, double[] coordB){
 		double rlat1 = Math.PI * coordA[0]/180;
 	    double rlat2 = Math.PI * coordB[0]/180;
 	 
