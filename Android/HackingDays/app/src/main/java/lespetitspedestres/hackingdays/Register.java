@@ -83,7 +83,7 @@ public class Register extends Activity {
 			pass = (TextView) findViewById(R.id.pays);
 			str += pass.toString();
 			Toast toast = new Toast(getApplicationContext(), str);
-			toast.show
+			toast.show();
 			
 			PrintWriter out = new PrintWriter(new BufferedWriter(
 					new OutputStreamWriter(socket.getOutputStream())), true);
