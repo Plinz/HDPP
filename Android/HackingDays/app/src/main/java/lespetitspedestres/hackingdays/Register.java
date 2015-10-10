@@ -19,6 +19,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static android.widget.Toast.*;
+
 public class Register extends Activity {
 	private Socket socket;
 
@@ -54,7 +56,7 @@ public class Register extends Activity {
 		try {
 			String str = "RGTR:";
 
-			TextView adresse = null;
+		/*	TextView adresse = null;
 			adresse = (TextView) findViewById(R.id.adresse);
 
 			str += adresse.getText() + "" + ",";
@@ -84,13 +86,23 @@ public class Register extends Activity {
 			str += age.getText() + "" + "|";
 			TextView pass = null;
 			pass = (TextView) findViewById(R.id.pass);
-			str += pass.getText() + "";
+			str += pass.getText() + "";*/
+			makeText(getApplicationContext(), str + "", LENGTH_LONG).show();
+			makeText(getApplicationContext(), "avant printwriter", LENGTH_LONG).show();
+
 			PrintWriter out = new PrintWriter(new BufferedWriter(
 					new OutputStreamWriter(socket.getOutputStream())), true);
 			out.flush();
+			makeText(getApplicationContext(), "après printwriter", LENGTH_LONG).show();
+
 			new ObjectInputStream(socket.getInputStream());
+			makeText(getApplicationContext(), "après inputstream", LENGTH_LONG).show();
 
 			out.println(str);
+			makeText(getApplicationContext(), str + "####", LENGTH_LONG).show();
+			Intent intentl = new Intent(Register.this, Principale.class);
+			startActivity(intentl);
+
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -98,6 +110,7 @@ public class Register extends Activity {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		makeText(getApplicationContext(),  "la ça a planté", LENGTH_LONG).show();
 	}
 
 	@Override
@@ -127,6 +140,7 @@ public class Register extends Activity {
 			} catch (IOException e1) {
 				e1.printStackTrace();
 			}
+
 		}
 	}
 	
