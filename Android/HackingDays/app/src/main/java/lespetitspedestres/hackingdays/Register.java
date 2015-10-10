@@ -57,7 +57,7 @@ public class Register extends Activity {
 		try {
 			String str = "RGTR:";
 
-		/*	TextView adresse = null;
+			TextView adresse = null;
 			adresse = (TextView) findViewById(R.id.adresse);
 
 			str += adresse.getText() + "" + ",";
@@ -87,7 +87,7 @@ public class Register extends Activity {
 			str += age.getText() + "" + "|";
 			TextView pass = null;
 			pass = (TextView) findViewById(R.id.pass);
-			str += pass.getText() + "";*/
+			str += pass.getText() + "";
 			makeText(getApplicationContext(), str + "", LENGTH_LONG).show();
 			makeText(getApplicationContext(), "avant printwriter", LENGTH_LONG).show();
 
