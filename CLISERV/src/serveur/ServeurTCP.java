@@ -5,18 +5,15 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class ServeurTCP {
-	private ServerSocket serveurSocket = null;
+	private Thread serverThread = null;
 	private Socket unClient = null;
 	
-	public ServeurTCP(int port) {
-		try {
-			this.serveurSocket = new ServerSocket(port);
-		} catch (IOException e) {
-			e.printStackTrace();
-			System.exit(1);
-		}
-	}
 	
+	public ServeurTCP() {
+			this.serverThread = new Thread(new ServerThread());
+			this.serverThread.start();
+	}
+/*	
 	public void miseEnService() {
 		while (true ) {
 			try {
@@ -35,9 +32,9 @@ public class ServeurTCP {
 			}
 		}
 	}
-
+*/
 	public static void main(String[] args){
-		ServeurTCP serv = new ServeurTCP( 4242);
-		serv.miseEnService();
+		new ServeurTCP();
+//		serv.miseEnService();
 	}
 }
