@@ -18,8 +18,8 @@ public class ThreadServeur extends Thread {
 	public ThreadServeur(){}
 	
 	public ThreadServeur(Socket c) throws IOException{
-		this.in = new ObjectInputStream(c.getInputStream());
 		this.out = new ObjectOutputStream(c.getOutputStream());
+		this.in = new ObjectInputStream(c.getInputStream());
 	}
 	
 	public void run (){
