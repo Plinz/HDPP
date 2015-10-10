@@ -24,17 +24,21 @@ public class ThreadServeur extends Thread {
 	
 	public void run (){
 		try {
+			System.out.println("Debut Lecture Socket");
 			byte buf[] = new byte[1024];
 			while (in.read(buf) != -1) {}
 			this.in.close();
-			
-			String[] reponse = new String(buf, "UTF-8").split("[:]");
+			System.out.println("Fin Lecture Socket");
+			String tmp = new String(buf, "UTF-8");
+			String[] reponse = tmp.split("[:]");
+			System.out.println("Recu :"+tmp);
 			switch (reponse[0]){
 					case "RGTR":
 						String[] l = reponse[1].split("[|]");
 						Client c = new Client(l[0], l[1], l[2], l[3], Integer.parseInt(l[4]), l[5], l[6], 500.0);
 						Serveur.listClient.add(c);
 					    c.setClientVoisins(Serveur.clientVoisins(c));
+					    System.out.println("Registering OK");
 						break;
 					case "CO":
 						break;

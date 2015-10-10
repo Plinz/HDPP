@@ -21,7 +21,9 @@ public class ServeurTCP {
 		ThreadServeur thread;
 		while (true ) {
 			try {
+				System.out.println("Serveur Waiting Connexion");
 				unClient = serveurSocket.accept();
+				System.out.println("Connexion Etablished");
 				thread = new ThreadServeur(unClient);
 				thread.start();
 			} catch (IOException e) {
