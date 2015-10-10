@@ -30,8 +30,8 @@ public class Register extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		new Thread(new ClientThread()).start();
 		setContentView(R.layout.activity_register);
+		new Thread(new ClientThread()).start();
 
 	}
 
@@ -92,11 +92,7 @@ public class Register extends Activity {
 
 			PrintWriter out = new PrintWriter(new BufferedWriter(
 					new OutputStreamWriter(socket.getOutputStream())), true);
-			out.flush();
 			makeText(getApplicationContext(), "après printwriter", LENGTH_LONG).show();
-
-			new ObjectInputStream(socket.getInputStream());
-			makeText(getApplicationContext(), "après inputstream", LENGTH_LONG).show();
 
 			out.println(str);
 			makeText(getApplicationContext(), str + "####", LENGTH_LONG).show();
