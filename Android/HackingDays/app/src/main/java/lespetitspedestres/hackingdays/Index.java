@@ -28,9 +28,13 @@ public class Index extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_index);
 	}
-	private void onPause() {
+	public void onPause() {
 		super.onPause();
-		socket.close();
+		try {
+			socket.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override

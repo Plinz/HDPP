@@ -8,12 +8,11 @@
 
     <ImageView
         android:id="@+id/imageView1"
-        android:src="@drawable/bob"
+        android:src="@drawable/acceuil"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="256dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/etLogin" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -46,7 +45,7 @@
         android:id="@+id/butLogin"
         android:layout_below="@+id/etPassword"
         android:layout_centerHorizontal="true"
-        android:background="#9C27B0"
+        android:background="#c20e0e"
         android:textColor="#f44336"
         android:onClick="doAutent" />
 
