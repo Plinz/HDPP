@@ -16,4 +16,5 @@
 
     <string name="action_example">Example action</string>
     <string name="imagebob">jpg</string>
+    <string name="title_activity_details">Details</string>
 </resources>

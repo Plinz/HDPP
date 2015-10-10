@@ -57,6 +57,6 @@ public class Index extends Activity {
 		startActivity(intentl);
 	}
 
-	
+
  
 }

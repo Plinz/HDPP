@@ -85,10 +85,10 @@ public class Register extends Activity {
 			TextView pass = null;
 			pass = (TextView) findViewById(R.id.pass);
 			str += pass.getText() + "";
-			
-			new ObjectInputStream(socket.getInputStream());
 			PrintWriter out = new PrintWriter(new BufferedWriter(
 					new OutputStreamWriter(socket.getOutputStream())), true);
+			new ObjectInputStream(socket.getInputStream());
+
 			out.println(str);
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
