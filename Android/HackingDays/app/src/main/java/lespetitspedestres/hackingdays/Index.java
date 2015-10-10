@@ -7,6 +7,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import java.io.IOException;
+import java.net.InetAddress;
+
 public class Index extends Activity {
 
     @Override
@@ -43,7 +46,11 @@ public class Index extends Activity {
     }
 
     public void doLogin(View view){
-        Client test = new Client("176.31.118.118", 4242);
+        try {
+            Client test = new Client(InetAddress.getByName("176.31.118.118"), 4242);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         Intent intentl = new Intent(Index.this,Login.class);
         startActivity(intentl);
     }
