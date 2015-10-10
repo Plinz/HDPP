@@ -6,6 +6,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.PrintWriter;
+import java.net.InetAddress;
 import java.net.Socket;
 
 /**
@@ -16,15 +17,13 @@ public class Client {
     private PrintWriter envoi = null;
     private BufferedReader reception = null;
 
-    public Client(String ip, int port) throws IOException {
+    public Client(InetAddress ip, int port) throws IOException {
         this.socket = new Socket(ip, port);
         envoi = new PrintWriter(socket.getOutputStream(), true);
         reception = new BufferedReader(new InputStreamReader(socket.getInputStream()));
     }
 
-
     public void send() throws IOException {
-
         String message = "coucou";
         envoi.println(message);
     }

@@ -24,6 +24,24 @@ public class Client {
 	private String sexe;
 	private String mdp;
 	private ArrayList<Service> listService;
+	private ArrayList<Service> listAttente;
+	private double distance;
+
+	public ArrayList<Service> getListAttente() {
+		return listAttente;
+	}
+
+	public void setListAttente(ArrayList<Service> listAttente) {
+		this.listAttente = listAttente;
+	}
+
+	public double getDistance() {
+		return distance;
+	}
+
+	public void setDistance(double distance) {
+		this.distance = distance;
+	}
 
 	public String getAdresse() {
 		return adresse;
@@ -96,13 +114,13 @@ public class Client {
 	public void setMdp(String mdp) {
 		this.mdp = mdp;
 	}
-
+	
 	public Client() {}
 
 	public Client(String adresse, double[] coord, String email, String nom,
 			String prenom, int age, String sexe, String mdp,
-			ArrayList<Service> listService) {
-		super();
+			ArrayList<Service> listService, double distance, ArrayList<Service> listAttente) {
+		this.listAttente = listAttente;
 		this.adresse = adresse;
 		this.coord = coord;
 		this.email = email;
@@ -112,10 +130,11 @@ public class Client {
 		this.sexe = sexe;
 		this.mdp = mdp;
 		this.listService = listService;
+		this.distance = distance;
 	}
 
 	public Client(String adresse, String email, String nom, String prenom,
-			int age, String sexe, String mdp) throws IOException {
+			int age, String sexe, String mdp, double distance) throws IOException {
 		super();
 		this.adresse = adresse;
 		this.coord = new double[2];
@@ -136,6 +155,8 @@ public class Client {
 		this.sexe = sexe;
 		this.mdp = mdp;
 		this.listService = new ArrayList<Service>();
+		this.distance = distance;
+		this.listAttente = new ArrayList<Service>();
 	}
 
 	public static void main(String[] args) throws IOException {
