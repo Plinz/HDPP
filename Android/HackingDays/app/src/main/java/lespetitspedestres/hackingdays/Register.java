@@ -85,7 +85,7 @@ public class Register extends Activity {
 			pass = (TextView) findViewById(R.id.pass);
 			str += pass.getText() + "";
 			
-			
+			new InputStreamWriter(socket.getInputStream());
 			PrintWriter out = new PrintWriter(new BufferedWriter(
 					new OutputStreamWriter(socket.getOutputStream())), true);
 			out.println(str);
