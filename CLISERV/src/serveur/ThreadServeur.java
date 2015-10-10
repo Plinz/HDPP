@@ -18,10 +18,10 @@ public class ThreadServeur extends Thread {
 	public ThreadServeur(){}
 	
 	public ThreadServeur(Socket c) throws IOException{
-		System.out.println("output connexion");
-		this.oout = new ObjectOutputStream(c.getOutputStream());
 		System.out.println("input connexion");
 		this.in = new ObjectInputStream(c.getInputStream());
+		System.out.println("output connexion");
+		this.oout = new ObjectOutputStream(c.getOutputStream());
 		System.out.println("fin constructeur");
 	}
 	
