@@ -81,13 +81,13 @@ public class Principale extends Activity
     public void onSectionAttached(int number) {
         switch (number) {
             case 1:
-                mTitle = getString(R.string.title_section1);
+                mTitle = "Mon Profil";
                 break;
             case 2:
-                mTitle = getString(R.string.title_section2);
+                mTitle = "Mes Services";
                 break;
             case 3:
-                mTitle = getString(R.string.title_section3);
+                mTitle ="Mes Messages";
                 break;
         }
     }

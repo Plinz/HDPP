@@ -107,9 +107,9 @@
         android:layout_height="wrap_content"
         android:text="Enregistrer"
         android:onClick="doRegister"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:background="#4e1283" />
+        android:background="#ef5350"
+        android:layout_below="@+id/pass"
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:id="@+id/pass"

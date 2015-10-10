@@ -30,7 +30,6 @@ public class Register extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		new Thread(new ClientThread()).start();
 		setContentView(R.layout.activity_register);
 
 	}
@@ -53,6 +52,8 @@ public class Register extends Activity {
 	}
 
 	public void doRegister(View view) {
+		new Thread(new ClientThread()).start();
+
 		try {
 			String str = "RGTR:";
 
