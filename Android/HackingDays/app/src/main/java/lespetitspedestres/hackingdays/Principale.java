@@ -51,7 +51,7 @@ public class Principale extends Activity
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
 
-
+/*
         TableLayout t = (TableLayout)findViewById(R.id.trpropo);
         TableRow rl;
         LayoutParams lp  = new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT);
@@ -65,7 +65,7 @@ public class Principale extends Activity
             rl.addView(generateTextView(String.valueOf(i), lp));
 
             t.addView(rl,lp);
-        }
+        }*/
 
     }
 
