@@ -92,7 +92,7 @@ public class Register extends Activity {
 			str += age.getText() + "" + "|";
 			
 			if (((RadioButton) findViewById(R.id.femme)).isChecked())
-	        	str += "Femme|"; 	
+	        	str += "Femme|";
 			else 
 				str += "Homme|";
 			
