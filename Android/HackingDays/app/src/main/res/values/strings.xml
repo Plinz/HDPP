@@ -6,8 +6,8 @@
     <string name="title_activity_register">Register</string>
     <string name="title_activity_principale">Principale</string>
 
-    <string name="title_section1">Mon Profil</string>
-    <string name="title_section2">Mes Services</string>
+    <string name="title_section1">Mes services</string>
+    <string name="title_section2">Mon Profil</string>
     <string name="title_section3">Mes Messages</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>

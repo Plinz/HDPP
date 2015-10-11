@@ -52,11 +52,12 @@
 
                         <TextView
                             android:id="@+id/tvDescription"
-                            android:text="ceci est une description"
+                            android:text="Je recherche un tournevis s&apos;il vous plaît"
                             android:padding="3dip"
                             android:layout_width="173dp"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
                             android:layout_toEndOf="@+id/ivgens" />
 
                         <TextView
@@ -95,16 +96,17 @@
 
                         <TextView
                             android:id="@+id/textView"
-                            android:text="ceci est une description"
+                            android:text="J&apos;ai besoin d&apos;un coup de main pour monter l&apos;armoir que je viens d&apos;acheter"
                             android:padding="3dip"
                             android:layout_width="173dp"
                             android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
+                            android:layout_below="@+id/textView3"
+                            android:layout_alignParentEnd="true"
                             android:layout_toEndOf="@+id/imageView" />
 
                         <TextView
                             android:id="@+id/textView3"
-                            android:text="Service"
+                            android:text="Aide !"
                             android:gravity="center"
                             android:padding="3dip"
                             android:layout_width="match_parent"
@@ -132,12 +134,13 @@
 
                         <TextView
                             android:id="@+id/textView4"
-                            android:text="ceci est une description"
+                            android:text="J&apos;ai des pllaces de ciné qui se terminent demain !"
                             android:padding="3dip"
                             android:layout_width="173dp"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
-                            android:layout_toEndOf="@+id/imageView4" />
+                            android:layout_toEndOf="@+id/imageView4"
+                            android:layout_marginStart="33dp" />
 
                         <TextView
                             android:id="@+id/textView41"
@@ -169,11 +172,12 @@
 
                         <TextView
                             android:id="@+id/textView5"
-                            android:text="ceci est une description"
+                            android:text="bonjour je recherche une perceuse à percussion"
                             android:padding="3dip"
                             android:layout_width="173dp"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
                             android:layout_toEndOf="@+id/imageView5" />
 
                         <TextView
@@ -206,11 +210,12 @@
 
                         <TextView
                             android:id="@+id/textView6"
-                            android:text="ceci est une description"
+                            android:text="ma voiture a été colée quelqu'un a vu quelquechosse?"
                             android:padding="3dip"
                             android:layout_width="173dp"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
                             android:layout_toEndOf="@+id/imageView6" />
 
                         <TextView
@@ -244,11 +249,12 @@
 
                         <TextView
                             android:id="@+id/textView7"
-                            android:text="ceci est une description"
+                            android:text="je viens de déménager qui pour aller boire un verre?"
                             android:padding="3dip"
                             android:layout_width="173dp"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
                             android:layout_toEndOf="@+id/imageView7" />
 
                         <TextView
@@ -281,11 +287,12 @@
 
                         <TextView
                             android:id="@+id/textView8"
-                            android:text="ceci est une description"
+                            android:text="cherche tondeuse urgent svp"
                             android:padding="3dip"
                             android:layout_width="173dp"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
                             android:layout_toEndOf="@+id/imageView8" />
 
                         <TextView
@@ -318,11 +325,12 @@
 
                         <TextView
                             android:id="@+id/textView9"
-                            android:text="ceci est une description"
+                            android:text="quelqu'un pour garder ma fille?"
                             android:padding="3dip"
                             android:layout_width="173dp"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
                             android:layout_toEndOf="@+id/imageView9" />
 
                         <TextView
@@ -355,11 +363,12 @@
 
                         <TextView
                             android:id="@+id/textView10"
-                            android:text="ceci est une description"
+                            android:text="qui pour regarder le match?"
                             android:padding="3dip"
                             android:layout_width="173dp"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
                             android:layout_toEndOf="@+id/imageView10" />
 
                         <TextView
@@ -395,11 +404,12 @@
 
                         <TextView
                             android:id="@+id/tvDescriptio1n"
-                            android:text="ceci est une description"
+                            android:text="qui dsait utilisé une iimprimente HP?"
                             android:padding="3dip"
                             android:layout_width="173dp"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
                             android:layout_toEndOf="@+id/ivgens1" />
 
                         <TextView
@@ -437,11 +447,12 @@
 
                         <TextView
                             android:id="@+id/textView1"
-                            android:text="ceci est une description"
+                            android:text="je me sens seul quelqu'un?"
                             android:padding="3dip"
                             android:layout_width="173dp"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
                             android:layout_toEndOf="@+id/imageView1" />
 
                         <TextView
@@ -473,11 +484,12 @@
 
                         <TextView
                             android:id="@+id/textView42"
-                            android:text="ceci est une description"
+                            android:text="quelqu'un pou accompagner nos enfants faire du poney?"
                             android:padding="3dip"
                             android:layout_width="173dp"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
                             android:layout_toEndOf="@+id/imageView41" />
 
                         <TextView
@@ -509,11 +521,12 @@
 
                         <TextView
                             android:id="@+id/textView52"
-                            android:text="ceci est une description"
+                            android:text="je n'ai plus de sucre"
                             android:padding="3dip"
                             android:layout_width="173dp"
                             android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
+                            android:layout_below="@+id/textView511"
+                            android:layout_alignParentEnd="true"
                             android:layout_toEndOf="@+id/imageView51" />
 
                         <TextView
@@ -527,114 +540,7 @@
                             android:layout_centerHorizontal="true" />
                     </RelativeLayout>
                 </TableRow>
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <ImageView
-                            android:id="@+id/imageView61"
-                            android:src="@drawable/gens14"
-                            android:layout_width="111dp"
-                            android:layout_height="70dp"
-                            android:layout_alignParentTop="true"
-                            android:layout_alignParentStart="true" />
-
-                        <TextView
-                            android:id="@+id/textView62"
-                            android:text="ceci est une description"
-                            android:padding="3dip"
-                            android:layout_width="173dp"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_toEndOf="@+id/imageView61" />
-
-                        <TextView
-                            android:id="@+id/textView611"
-                            android:text="Service"
-                            android:gravity="center"
-                            android:padding="3dip"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentTop="true"
-                            android:layout_centerHorizontal="true" />
-                    </RelativeLayout>
-                </TableRow>
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <ImageView
-                            android:id="@+id/imageView71"
-                            android:src="@drawable/gens15"
-                            android:layout_width="111dp"
-                            android:layout_height="70dp"
-                            android:layout_alignParentTop="true"
-                            android:layout_alignParentStart="true" />
-
-                        <TextView
-                            android:id="@+id/textView72"
-                            android:text="ceci est une description"
-                            android:padding="3dip"
-                            android:layout_width="173dp"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_toEndOf="@+id/imageView71" />
-
-                        <TextView
-                            android:id="@+id/textView711"
-                            android:text="Service"
-                            android:gravity="center"
-                            android:padding="3dip"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentTop="true"
-                            android:layout_centerHorizontal="true" />
-                    </RelativeLayout>
-                </TableRow>
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <ImageView
-                            android:id="@+id/imageView81"
-                            android:src="@drawable/gens16"
-                            android:layout_width="111dp"
-                            android:layout_height="70dp"
-                            android:layout_alignParentTop="true"
-                            android:layout_alignParentStart="true" />
-
-                        <TextView
-                            android:id="@+id/textView82"
-                            android:text="ceci est une description"
-                            android:padding="3dip"
-                            android:layout_width="173dp"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_toEndOf="@+id/imageView81" />
-
-                        <TextView
-                            android:id="@+id/textView811"
-                            android:text="Service"
-                            android:gravity="center"
-                            android:padding="3dip"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentTop="true"
-                            android:layout_centerHorizontal="true" />
-                    </RelativeLayout>
-                </TableRow>
                 <TableRow
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
@@ -653,11 +559,12 @@
 
                         <TextView
                             android:id="@+id/textView92"
-                            android:text="ceci est une description"
+                            android:text="allons faire un tour en foret"
                             android:padding="3dip"
                             android:layout_width="173dp"
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
                             android:layout_toEndOf="@+id/imageView91" />
 
                         <TextView
@@ -671,6 +578,121 @@
                             android:layout_centerHorizontal="true" />
                     </RelativeLayout>
                 </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <ImageView
+                            android:id="@+id/imageView71"
+                            android:src="@drawable/gens15"
+                            android:layout_width="111dp"
+                            android:layout_height="70dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <TextView
+                            android:id="@+id/textView72"
+                            android:text="envie de sortir, mais je ne connais pas la ville"
+                            android:padding="3dip"
+                            android:layout_width="173dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_toEndOf="@+id/imageView71" />
+
+                        <TextView
+                            android:id="@+id/textView711"
+                            android:text="Service"
+                            android:gravity="center"
+                            android:padding="3dip"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <ImageView
+                            android:id="@+id/imageView81"
+                            android:src="@drawable/gens16"
+                            android:layout_width="111dp"
+                            android:layout_height="70dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <TextView
+                            android:id="@+id/textView82"
+                            android:text="cherche plombier urgent"
+                            android:padding="3dip"
+                            android:layout_width="173dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_toEndOf="@+id/imageView81" />
+
+                        <TextView
+                            android:id="@+id/textView811"
+                            android:text="Service"
+                            android:gravity="center"
+                            android:padding="3dip"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <ImageView
+                            android:id="@+id/imageView61"
+                            android:src="@drawable/gens14"
+                            android:layout_width="111dp"
+                            android:layout_height="70dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true" />
+
+                        <TextView
+                            android:id="@+id/textView62"
+                            android:text="qui sait peindre une lampe?"
+                            android:padding="3dip"
+                            android:layout_width="173dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textView611"
+                            android:layout_alignParentEnd="true"
+                            android:layout_toEndOf="@+id/imageView61" />
+
+                        <TextView
+                            android:id="@+id/textView611"
+                            android:text="Service"
+                            android:gravity="center"
+                            android:padding="3dip"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                </TableRow>
+
                 <TableRow
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
@@ -689,11 +711,12 @@
 
                         <TextView
                             android:id="@+id/textView102"
-                            android:text="ceci est une description"
+                            android:text="cherche cours d'aquarelle dans le quartier"
                             android:padding="3dip"
                             android:layout_width="173dp"
                             android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
+                            android:layout_below="@+id/textView1011"
+                            android:layout_alignParentEnd="true"
                             android:layout_toEndOf="@+id/imageView101" />
 
                         <TextView
@@ -707,50 +730,10 @@
                             android:layout_centerHorizontal="true" />
                     </RelativeLayout>
                 </TableRow>
+
             </TableLayout>
         </ScrollView>
 
-        <!--
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/tr2">>
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/rl2">
-
-                        <ImageView
-                            android:id="@+id/ivgens2"
-                            android:src="@drawable/gens"
-                            android:layout_width="111dp"
-                            android:layout_height="70dp"
-                            android:layout_alignParentTop="true"
-                            android:layout_alignParentStart="true" />
-
-                        <TextView
-                            android:id="@+id/tvDescription2"
-                            android:text="ceci est une description"
-                            android:padding="3dip"
-                            android:layout_width="173dp"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/tvTitre2"
-                            android:layout_centerHorizontal="true" />
-
-                        <TextView
-                            android:id="@+id/tvTitre2"
-                            android:text="Service"
-                            android:gravity="center"
-                            android:layout_alignleft="@+id/ivgens2"
-                            android:padding="3dip"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentTop="true"
-                            android:layout_centerHorizontal="true" />
-                    </RelativeLayout>
-                </TableRow>
-
-        -->
         </FrameLayout>
 
         <!-- android:layout_gravity="start" tells DrawerLayout to treat
