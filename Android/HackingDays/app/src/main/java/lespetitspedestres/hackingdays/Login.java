@@ -17,11 +17,11 @@ public class Login extends Activity {
 
         TextView login = null;
         login = (TextView) findViewById(R.id.etLogin);
-        login.setText("Paul");
+        login.setText("Max");
 
         TextView mdp = null;
         mdp = (TextView) findViewById(R.id.etPassword);
-        mdp.setText("Paul");
+        mdp.setText("mot de passe complexe");
     }
 
     @Override
@@ -47,8 +47,8 @@ public class Login extends Activity {
     }
 
     //verif du login a add
-    public void doAutent(View view){
-        Intent intenta = new Intent(Login.this,Principale.class);
+    public void doAutent(View view) {
+        Intent intenta = new Intent(Login.this, Principale.class);
         startActivity(intenta);
     }
 }

@@ -14,7 +14,9 @@
         android:text="Contacter"
         android:id="@+id/button"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:background="#c20e0e"
+        android:onClick="doContact" />
     <ImageView
         android:id="@+id/imageView1"
         android:src="@drawable/engrenages"

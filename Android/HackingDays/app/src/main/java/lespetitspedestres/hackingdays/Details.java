@@ -1,10 +1,15 @@
 package lespetitspedestres.hackingdays;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+
+import static android.widget.Toast.LENGTH_LONG;
+import static android.widget.Toast.makeText;
 
 public class Details extends Activity {
 
@@ -34,5 +39,12 @@ public class Details extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void doContact(View view){
+       // Intent intentl = new Intent(Details.this, Messages.class);
+        //startActivity(intentl);
+        makeText(getApplicationContext(),  "coming soon", LENGTH_LONG).show();
+
     }
 }

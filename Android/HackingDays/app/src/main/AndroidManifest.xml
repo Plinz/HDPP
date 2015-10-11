@@ -20,15 +20,14 @@
         android:icon="@drawable/logo2"
         android:label="TKT C NORMAL #LOL"
         android:theme="@style/AppTheme" >
-
         <activity
             android:name=".Index"
             android:label="Najbara" >
             <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <meta-data
@@ -51,7 +50,6 @@
             android:name=".Details"
             android:label="@string/title_activity_details" >
         </activity>
-
     </application>
 
 </manifest>
