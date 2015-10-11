@@ -6,6 +6,7 @@ import android.app.ActionBar;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -166,6 +167,11 @@ public class Principale extends Activity
             ((Principale) activity).onSectionAttached(
                     getArguments().getInt(ARG_SECTION_NUMBER));
         }
+    }
+
+    public void rowClick(View view){
+        Intent intenta = new Intent(Principale.this,Details.class);
+        startActivity(intenta);
     }
 
     public TextView generateTextView(String s, ViewGroup.LayoutParams lp){

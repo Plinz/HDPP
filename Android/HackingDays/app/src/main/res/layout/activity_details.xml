@@ -5,23 +5,90 @@
     android:paddingTop="0dp"
     android:paddingBottom="0dp"
     tools:context="lespetitspedestres.hackingdays.Details"
-    android:id="@+id/rl">
+    android:id="@+id/rl"
+    android:background="@color/ecran">
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="New Button"
+        android:text="Contacter"
         android:id="@+id/button"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_centerHorizontal="true" />
     <ImageView
         android:id="@+id/imageView1"
         android:src="@drawable/engrenages"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/butRegister"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="39dp" />
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/button" />
+
+    <GridLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/button"
+        android:layout_alignEnd="@+id/button">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="94dp"
+            android:layout_row="0"
+            android:layout_column="0">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView2"
+                android:src="@drawable/bob"
+                android:layout_marginEnd="152dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Nom Prenom"
+                android:id="@+id/textView13"
+                android:textSize="24dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Age"
+                android:id="@+id/textView12"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:paddingRight="15dp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Titre"
+            android:id="@+id/textView11"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:gravity="center_vertical|center_horizontal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Description"
+            android:id="@+id/textView2"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:padding="5dp" />
+    </GridLayout>
 
 </RelativeLayout>

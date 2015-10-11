@@ -16,6 +16,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -90,8 +91,7 @@ public class Register extends Activity {
 			age = (TextView) findViewById(R.id.age);
 			str += age.getText() + "" + "|";
 			
-			if (((RadioButton) findViewById(R.id.femme)).isChecked())
-	        	str += "Femme|"; 	
+			if (((RadioButton) findViewById(R.id.femme)).isChecked( ,
 			else 
 				str += "Homme|";
 			
