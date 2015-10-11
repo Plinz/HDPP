@@ -14,7 +14,7 @@ import client.Service;
  */
 public class Serveur {
 	public static ArrayList<Client> listClient;
-	public static HashMap<Client, Service> listService;
+	public static ArrayList<Service> listService;
 
 	public static ArrayList<Client> clientVoisins(Client ref){
 		double d = ref.getDistance();
@@ -25,5 +25,14 @@ public class Serveur {
 			}
 		}
 		return ret;
+	}
+	
+	public static Client getClientByEmail (String email){
+		for (int j=0; j<Serveur.listClient.size(); j++){
+			if (Serveur.listClient.get(j).getEmail().equals(email)){
+				return Serveur.listClient.get(j);
+			}
+		}
+		return null;
 	}
 }

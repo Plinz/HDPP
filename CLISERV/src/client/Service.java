@@ -44,6 +44,7 @@ public class Service {
 
 	public Service(Client demandeur, String titre, String description, UUID uuid) {
 		this.demandeur = demandeur;
+		this.demandeur.addListOwnService(this);
 		this.titre = titre;
 		this.description = description;
 		this.uuid = uuid;

@@ -32,7 +32,7 @@ public class Client extends Observable implements Observer {
 	private ArrayList<Client> clientVoisins;
 	private double distance;
 
-	public void addListService(Service serv){
+	public void addListOwnService(Service serv){
 		this.listOwnService.add(serv);
 		this.setChanged();
 		this.notifyObservers(serv);
