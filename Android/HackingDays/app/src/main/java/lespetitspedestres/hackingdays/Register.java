@@ -73,21 +73,32 @@ public class Register extends Activity {
 			TextView code_postal = null;
 			code_postal = (TextView) findViewById(R.id.code_postal);
 			str += code_postal.getText() + "" + "|";
+			
 			TextView email = null;
 			email = (TextView) findViewById(R.id.email);
 			str += email.getText() + "" + "|";
+			
 			TextView nom = null;
 			nom = (TextView) findViewById(R.id.nom);
 			str += nom.getText() + "" + "|";
+			
 			TextView prenom = null;
 			prenom = (TextView) findViewById(R.id.prenom);
 			str += prenom.getText() + "" + "|";
+			
 			TextView age = null;
 			age = (TextView) findViewById(R.id.age);
 			str += age.getText() + "" + "|";
+			
+			if (((RadioButton) findViewById(R.id.femme)).isChecked())
+	        	str += "Femme|"; 	
+			else 
+				str += "Homme|";
+			
 			TextView pass = null;
 			pass = (TextView) findViewById(R.id.pass);
 			str += pass.getText() + "";
+			
 			makeText(getApplicationContext(), str + "", LENGTH_LONG).show();
 			makeText(getApplicationContext(), "avant printwriter", LENGTH_LONG).show();
 
