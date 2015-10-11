@@ -91,7 +91,8 @@ public class Register extends Activity {
 			age = (TextView) findViewById(R.id.age);
 			str += age.getText() + "" + "|";
 			
-			if (((RadioButton) findViewById(R.id.femme)).isChecked( ,
+			if (((RadioButton) findViewById(R.id.femme)).isChecked())
+	        	str += "Femme|"; 	
 			else 
 				str += "Homme|";
 			

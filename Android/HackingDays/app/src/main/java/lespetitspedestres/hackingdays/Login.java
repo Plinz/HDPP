@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 public class Login extends Activity {
 
@@ -13,6 +14,14 @@ public class Login extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        TextView login = null;
+        login = (TextView) findViewById(R.id.etLogin);
+        login.setText("Paul");
+
+        TextView mdp = null;
+        mdp = (TextView) findViewById(R.id.etPassword);
+        mdp.setText("Paul");
     }
 
     @Override

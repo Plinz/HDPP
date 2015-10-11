@@ -47,6 +47,7 @@
         android:layout_below="@+id/etPassword"
         android:layout_centerHorizontal="true"
         android:background="#c20e0e"
-        android:onClick="doAutent" />
+        android:onClick="doAutent"
+        android:focusable="true" />
 
 </RelativeLayout>
